@@ -1,0 +1,43 @@
+Function: main/0
+Constants: None, "integer: ", 0
+Locals: x, ex
+Globals: print, input, Exception, int
+
+BEGIN
+  SETUP_EXCEPT       label00
+  LOAD_GLOBAL              3
+  LOAD_GLOBAL              1
+  LOAD_CONST               1
+  CALL_FUNCTION            1
+  CALL_FUNCTION            1
+  STORE_FAST               0
+  JUMP_FORWARD       label01
+  label00:           DUP_TOP
+  LOAD_GLOBAL              2
+  COMPARE_OP              10
+  POP_JUMP_IF_FALSE  label02
+  POP_TOP
+  STORE_FAST               1
+  POP_TOP
+  SETUP_FINALLY      label03
+  LOAD_GLOBAL              0
+  LOAD_FAST                1
+  CALL_FUNCTION            1
+  POP_TOP
+  POP_BLOCK
+  POP_EXCEPT
+  label02: LOAD_CONST        0
+  LOAD_FAST                  1
+  STORE_FAST                 1
+  LOAD_CONST                 2
+  STORE_FAST                 0
+  END_FINALLY
+  JUMP_FORWARD         label01
+  label03: LOAD_CONST        2
+  STORE_FAST                 0
+  END_FINALLY
+  label01: LOAD_GLOBAL       0
+  LOAD_FAST                  0
+  CALL_FUNCTION              1
+  RETURN_VALUE
+END

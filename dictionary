@@ -1,0 +1,18 @@
+Function: main/0
+Constants: None, "a", 1, "b", 2, "c", 3
+Locals: dict
+BEGIN
+          BUILD_MAP                      3
+          LOAD_CONST                     1
+          LOAD_CONST                     2
+          STORE_MAP                
+          LOAD_CONST                     3
+          LOAD_CONST                     4
+          STORE_MAP                
+          LOAD_CONST                     5
+          LOAD_CONST                     6
+          STORE_MAP                
+          STORE_FAST                     0
+          LOAD_CONST                     0
+          RETURN_VALUE             
+END

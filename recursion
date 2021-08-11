@@ -1,0 +1,46 @@
+Function: rec/2
+Constants: None, 1, 0
+Locals: i, n
+Globals: rec
+
+BEGIN
+              LOAD_FAST                1
+              LOAD_CONST               2
+              COMPARE_OP               2
+              POP_JUMP_IF_FALSE   label00
+              LOAD_FAST                0
+              RETURN_VALUE
+    label00:  LOAD_GLOBAL              0
+              LOAD_FAST                0
+              LOAD_CONST               1
+              BINARY_ADD
+              LOAD_FAST                1
+              LOAD_CONST               1
+              BINARY_SUBTRACT
+              CALL_FUNCTION            2
+              LOAD_FAST                0
+              BINARY_ADD
+              RETURN_VALUE
+END
+
+
+Function: main/0
+Constants: None, "value: ", 0
+Locals: x
+Globals: input, rec, print, int
+
+BEGIN
+            LOAD_GLOBAL                 3
+            LOAD_GLOBAL                 0
+            LOAD_CONST                  1
+            CALL_FUNCTION               1
+            CALL_FUNCTION               1
+            STORE_FAST                  0
+            LOAD_GLOBAL                 2
+            LOAD_GLOBAL                 1
+            LOAD_CONST                  2
+            LOAD_FAST                   0
+            CALL_FUNCTION               2
+            CALL_FUNCTION               1
+            RETURN_VALUE
+END
